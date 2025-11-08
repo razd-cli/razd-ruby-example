@@ -1,12 +1,6 @@
 # app.ru
 require 'bundler/inline'
 
-gemfile do
-  source 'https://rubygems.org'
-  gem 'rails', '~> 7.1'
-  gem 'sqlite3'
-end
-
 require 'rails'
 require 'action_controller/railtie'
 
