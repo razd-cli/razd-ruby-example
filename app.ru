@@ -7,11 +7,11 @@ app = Proc.new do |env|
   
   case path
   when '/'
-    ['200', {'Content-Type' => 'text/plain'}, ['Welcome to Simple Rack App!']]
+    [200, {'content-type' => 'text/plain'}, ['Welcome to Simple Rack App!']]
   when '/hello'
-    ['200', {'Content-Type' => 'text/plain'}, ['Hello, World!']]
+    [200, {'content-type' => 'text/plain'}, ['Hello, World!']]
   else
-    ['404', {'Content-Type' => 'text/plain'}, ['Not Found']]
+    [404, {'content-type' => 'text/plain'}, ['Not Found']]
   end
 end
 
