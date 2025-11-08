@@ -1,0 +1,39 @@
+mise:
+  tools:
+    task: latest
+    ruby: latest
+
+tasks:
+  default:
+    desc: "Set up project and start development"
+    cmds:
+      - echo "🚀 Setting up Ruby Rack project..."
+      - task: install
+      - task: dev
+      
+  install:
+    desc: "Install Ruby gems and development tools"
+    cmds:
+      - echo "📦 Installing mise tools..."
+      - mise install
+      - echo "💎 Installing Ruby gems..."
+      - bundle install
+      
+  dev:
+    desc: "Start development server"
+    cmds:
+      - echo "🚀 Starting Rack development server..."
+      - rackup app.ru -p 9292
+      
+  build:
+    desc: "Verify project setup"
+    cmds:
+      - echo "🔨 Verifying Ruby project..."
+      - bundle check
+      - echo "✅ Project is ready"
+      
+  clean:
+    desc: "Clean dependencies"
+    cmds:
+      - echo "🧹 Cleaning..."
+      - rm -f gems.locked
