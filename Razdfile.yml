@@ -1,9 +1,11 @@
 version: "1"
 
-mise:
-  tools:
-    task: latest
-    ruby: latest
+dependencies:
+  using: "mise"
+
+  ensure:
+    - "task@latest"
+    - "ruby@latest"
 
 tasks:
   default:
