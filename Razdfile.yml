@@ -24,10 +24,10 @@ tasks:
       - bundle install
       
   dev:
-    desc: "Start development server"
+    desc: "Start development server (auto-stops after 3s)"
     cmds:
       - echo "🚀 Starting Rack development server..."
-      - rackup app.ru -p 9292
+      - timeout 3 bundle exec rackup app.ru -p 9292; echo "✅ Server stopped after 3s"
       
   build:
     desc: "Verify project setup"
