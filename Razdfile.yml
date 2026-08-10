@@ -5,7 +5,7 @@ dependencies:
 
   ensure:
     - "task@latest"
-    - "ruby@latest"
+    - "ubi:spinel-coop/rv@latest"
 
 tasks:
   default:
